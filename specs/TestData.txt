@@ -1,0 +1,34 @@
+# Urls
+Spec: https://customerdataapi.azurewebsites.net/api
+Testdata: https://customerdataapi-codetest-bughceejfwbwbkb9.swedencentral-01.azurewebsites.net/
+
+# SSNs
+19800115-1234
+----
+19900220-5678
+19751230-9101
+19850505-4321
+19951212-3456
+
+
+OK:
+https://customerdataapi-codetest-bughceejfwbwbkb9.swedencentral-01.azurewebsites.net/personal-details/19800115-1234
+https://customerdataapi-codetest-bughceejfwbwbkb9.swedencentral-01.azurewebsites.net/contact-details/19800115-1234
+https://customerdataapi-codetest-bughceejfwbwbkb9.swedencentral-01.azurewebsites.net/kyc-form/19800115-1234/2026-05-29
+
+No data:
+https://customerdataapi-codetest-bughceejfwbwbkb9.swedencentral-01.azurewebsites.net/personal-details/19900220-5678
+https://customerdataapi-codetest-bughceejfwbwbkb9.swedencentral-01.azurewebsites.net/contact-details/19900220-5678
+https://customerdataapi-codetest-bughceejfwbwbkb9.swedencentral-01.azurewebsites.net/kyc-form/19900220-5678/2026-05-29
+
+https://customerdataapi-codetest-bughceejfwbwbkb9.swedencentral-01.azurewebsites.net/personal-details/19751230-9101
+https://customerdataapi-codetest-bughceejfwbwbkb9.swedencentral-01.azurewebsites.net/contact-details/19751230-9101
+https://customerdataapi-codetest-bughceejfwbwbkb9.swedencentral-01.azurewebsites.net/kyc-form/19751230-9101/2026-05-29
+
+https://customerdataapi-codetest-bughceejfwbwbkb9.swedencentral-01.azurewebsites.net/personal-details/19850505-4321
+https://customerdataapi-codetest-bughceejfwbwbkb9.swedencentral-01.azurewebsites.net/contact-details/19850505-4321
+https://customerdataapi-codetest-bughceejfwbwbkb9.swedencentral-01.azurewebsites.net/kyc-form/19850505-4321/2026-05-29
+
+https://customerdataapi-codetest-bughceejfwbwbkb9.swedencentral-01.azurewebsites.net/personal-details/19951212-3456
+https://customerdataapi-codetest-bughceejfwbwbkb9.swedencentral-01.azurewebsites.net/contact-details/19951212-3456
+https://customerdataapi-codetest-bughceejfwbwbkb9.swedencentral-01.azurewebsites.net/kyc-form/19951212-3456/2026-05-29

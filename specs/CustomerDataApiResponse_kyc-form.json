@@ -1,0 +1,44 @@
+{
+	"items": [
+		{
+			"key": "tax_identification_number",
+			"value": "19800115-1234"
+		},
+		{
+			"key": "date_of_birth",
+			"value": "1980-01-15"
+		},
+		{
+			"key": "nationality",
+			"value": "Swedish"
+		},
+		{
+			"key": "occupation",
+			"value": "System Developer"
+		},
+		{
+			"key": "source_of_funds",
+			"value": "Employment"
+		},
+		{
+			"key": "politically_exposed_person",
+			"value": "No"
+		},
+		{
+			"key": "annual_income",
+			"value": "550000"
+		},
+		{
+			"key": "expected_transaction_volume",
+			"value": "100000"
+		},
+		{
+			"key": "purpose_of_account",
+			"value": "Savings and Investments"
+		},
+		{
+			"key": "risk_profile",
+			"value": "Medium"
+		}
+	]
+}

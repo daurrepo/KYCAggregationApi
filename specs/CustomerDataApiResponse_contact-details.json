@@ -1,0 +1,23 @@
+{
+	"addresses": [
+		{
+			"street": "Storgatan 1",
+			"city": "Stockholm",
+			"state": "Stockholm",
+			"postalCode": "111 22",
+			"country": "Sweden"
+		}
+	],
+	"emails": [
+		{
+			"preferred": true,
+			"emailAddress": "erik.johansson@example.se"
+		}
+	],
+	"phoneNumbers": [
+		{
+			"preferred": true,
+			"number": "070-123 45 67"
+		}
+	]
+}
