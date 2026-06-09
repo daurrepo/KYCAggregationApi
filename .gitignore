@@ -427,3 +427,6 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+/src/Carnegie.KycAggregationApi.Api/kyc.db
+/src/Carnegie.KycAggregationApi.Api/kyc.db-shm
+/src/Carnegie.KycAggregationApi.Api/kyc.db-wal
