@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Carnegie.KycAggregationApi.Api/Carnegie.KycAggregationApi.Api.csproj" />
+    <Project Path="src/Carnegie.KycAggregationApi.Application/Carnegie.KycAggregationApi.Application.csproj" />
+    <Project Path="src/Carnegie.KycAggregationApi.Domain/Carnegie.KycAggregationApi.Domain.csproj" />
+    <Project Path="src/Carnegie.KycAggregationApi.Infrastructure/Carnegie.KycAggregationApi.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/" />
+</Solution>
