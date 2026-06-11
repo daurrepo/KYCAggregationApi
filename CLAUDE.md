@@ -58,4 +58,4 @@ SQLite file `kyc.db` (connection string `DefaultConnection`). EF Core migrations
 
 ### Tests
 
-The `/tests/` solution folder exists but is empty — no test projects yet.
+The `/tests/` solution folder contains test projects.
