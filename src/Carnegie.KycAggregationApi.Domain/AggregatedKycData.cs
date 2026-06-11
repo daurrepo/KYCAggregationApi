@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Carnegie.KycAggregationApi.Domain;
 
-public class AggregatedKycData
+public record AggregatedKycData
 {
     [Required]
     [StringLength(13)]

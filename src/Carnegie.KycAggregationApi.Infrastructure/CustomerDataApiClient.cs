@@ -7,6 +7,9 @@ using System.Text.Json;
 
 namespace Carnegie.KycAggregationApi.Infrastructure;
 
+/// <summary>
+/// Get Customer Data/KYC information from external API
+/// </summary>
 public class CustomerDataApiClient : ICustomerDataClient
 {
     private readonly HttpClient _http;
