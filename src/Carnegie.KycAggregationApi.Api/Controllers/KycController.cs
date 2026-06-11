@@ -1,5 +1,6 @@
 using Carnegie.KycAggregationApi.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace Carnegie.KycAggregationApi.Api.Controllers;
 
@@ -26,15 +27,12 @@ public class KycController : ControllerBase
     /// <returns></returns>
     [HttpGet("{ssn}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-    public async Task<IActionResult> GetAggregatedKycData(string ssn)
+    public async Task<IActionResult> GetAggregatedKycData([FromRoute][RegularExpression(@"^\d{8}-\d{4}$", ErrorMessage = "SSN must be in the format YYYYMMDD-XXXX")] string ssn)
     {
         var result = await _service.GetAsync(ssn, HttpContext.RequestAborted);
-        if (result is null)
-        {
-            return NotFound();
-        }
 
         return Ok(result);
     }

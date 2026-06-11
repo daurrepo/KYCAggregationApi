@@ -5,5 +5,7 @@
     <Project Path="src/Carnegie.KycAggregationApi.Domain/Carnegie.KycAggregationApi.Domain.csproj" />
     <Project Path="src/Carnegie.KycAggregationApi.Infrastructure/Carnegie.KycAggregationApi.Infrastructure.csproj" />
   </Folder>
-  <Folder Name="/tests/" />
+  <Folder Name="/tests/">
+    <Project Path="Carnegie.KycAggregationApi.UnitTests/Carnegie.KycAggregationApi.UnitTests.csproj" Id="c4cad128-96f9-4482-a87a-d7607e51ef47" />
+  </Folder>
 </Solution>
