@@ -69,7 +69,7 @@ Includes a date parameter, calling this with date of today as default. Date para
 - Had some thoughts about skipping Domain.Model since this is a code-assignment but in real world scenario there would be some business rules (check date for valid KYC-form, expiry depending on when latest saved and so on) so keeping the Domain layer is a good idea that does not force a structural rewrite in future.
 
 ## Validation of data
-- Should implement business rule to invalidate cached data
+These basic validations (and more) should be included in a future release
 - No future dates should be allowed
 - Should check SSN for valid Luhn-format
 - Should check for valid dates in birthdate
@@ -79,7 +79,7 @@ Includes a date parameter, calling this with date of today as default. Date para
 - Should add validation of SSNs
 - API only returns latest data (today). Consider if should include a parameter to get historical records, all or for a specific date
 - Consider if KYC Aggregation API should keep historical records to enable data-analysis
-- Data returned (example-data) is missing data for property/key-value-pair `tax_country` since it does not exist in actual implementation of Customer Data API. It is included in specifikation but actual API does not return `tax_country`. Can not use property `nationality` since it may differ from `tax_country`. Maybe key-value-pair/property `tax_country` exists for another persons. Since property `tax_country` also is required the API will not be functional as intended regarding available test-data. 
+- Data returned (example-data) is missing data for property/key-value-pair `tax_country` since it does not exist in actual implementation of Customer Data API. It is included in specifikation but actual API does not return `tax_country`. Can not use property `nationality` since it may differ from `tax_country`. Maybe key-value-pair/property `tax_country` exists for another persons. Since property `tax_country` also is required the API will not be fully functional regarding available test-data (no customer with seems to TaxCountry exist i Customer Data API. 
   - Considering this I will 
   1. check if `tax_country` is available from `/kyc-form` 
   2. save data in KYC Aggregation API database
@@ -90,7 +90,7 @@ Includes a date parameter, calling this with date of today as default. Date para
 Specifikation for KYC Aggregation does not include returning KYC-data that is available from Customer Data API like risk_profile, politically_exposed_person and more that may seem to be important for a KYC-api.
 
 ## Possible data structure mismatch (Address)
-KYCAggregation Data API returns a string with address, Customer Data API returns each address property in separate properties. 
+KYCAggregation Data API returns a string with address, Customer Data API returns each address property in separate properties. Other data is properties, I would consider if this should be separate properties as well.
 
 ## Customer SSN changes
 Should include a endpoint for getting historical SSNs since a person may change SSN and name through Skatteverket
@@ -99,6 +99,7 @@ Should include a endpoint for getting historical SSNs since a person may change 
 Now I use built-in logging, future development should implement a logger platform like Splunk, Application Insights/Azure Monitor or other logging provider for structured and centralized logging
 
 ## Caching
+Should implement business rule to invalidate cached data.
 A persistent caching provider should be used to lighten the load (reads) of database since every request is first selected from  database and then if not exist calling the external API. Caching mechanism should as well include a cache invalidation mechanism if new data for a customer is retrieved. Also some business rules to determine when to check for new data if customer-data already exists in KYC-database.
 
 ## GDPR
@@ -120,7 +121,7 @@ A lot more tests should be implemented:
 - Security Tests (OWASP)
 
 ### Arrange-Act-Assert
-Test should be written that uses pattern Arrange-Act-Assert
+Tests included that uses the pattern Arrange-Act-Assert
 
 # Possible requirements
 - Analyze what kind of consumers that are within the bank and what kind of requirements they may request for accessing data, like batch requests, GET for parameters like country and so on
